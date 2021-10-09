@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ user.email }} - Details{% endblock %}
+
+{% block body %}
+<!-- <h1>{{ user.email }}</h1> -->
+
+<p>
+  {{ user.email }}
+</p>
+
+<ul>
+  {% for rating in ratings %}
+    <li>Movie: {{ rating.movie.title }}</li>
+    <li>Score: {{rating.score}}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
